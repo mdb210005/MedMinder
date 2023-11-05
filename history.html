@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Medication Information Form</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <body>
+  <script type="module">
+
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyB5yOKFxgoW8YnvACB1ZO4PMbdrC8JI_7k",
+    authDomain: "medication-tracker-9f9d8.firebaseapp.com",
+    projectId: "medication-tracker-9f9d8",
+    storageBucket: "medication-tracker-9f9d8.appspot.com",
+    messagingSenderId: "712027737757",
+    appId: "1:712027737757:web:2bc4e4c603c8e7deec4e74",
+    measurementId: "G-29GVJETDYK"
+  };
+
+  //initialize firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+</script>
+
+  <div class="container">
+      <h1>Medication Information</h1>
+      <form action="#" method="post">
+          <div class="form-group">
+              <label for="medicationName">Medication Name:</label>
+              <input type="text" id="medicationName" name="medicationName" required>
+          </div>
+          <div class="form-group">
+              <label for="dosage">Dosage:</label>
+              <input type="text" id="dosage" name="dosage" required>
+          </div>
+          <div class="form-group">
+              <label for="frequency">Frequency:</label>
+              <input type="text" id="frequency" name="frequency" required>
+          </div>
+          <div class="form-group">
+              <label for="notes">Additional Notes:</label>
+              <textarea id="notes" name="notes" rows="4"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Take with a meal:</label>
+            <input type="radio" id="yes" name="meal" value="yes">
+            <label for="yes">Yes</label>
+            <input type="radio" id="no" name="meal" value="no">
+            <label for="no">No</label>
+          </div>
+          <button type="submit">Submit</button>
+      </form>
+  </div>
+
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
